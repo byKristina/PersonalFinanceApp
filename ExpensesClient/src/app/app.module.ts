@@ -14,11 +14,12 @@ import { HttpClientModule } from '@angular/common/http';
 
 //material design
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatInputModule, MatCardModule, MatSelectModule, MatTableModule, MatToolbarModule} from '@angular/material';
+import {MatButtonModule, MatInputModule, MatCardModule, MatSelectModule, MatTableModule, MatToolbarModule, MatDialogModule} from '@angular/material';
 import { NewEntryComponent } from './new-entry/new-entry.component';
 
 //forms
 import {ReactiveFormsModule} from '@angular/forms';
+import { UpdateEntryComponent } from './update-entry/update-entry.component';
 
 @NgModule({
   declarations: [
@@ -26,18 +27,20 @@ import {ReactiveFormsModule} from '@angular/forms';
     EntriesComponent,
     FooterComponent,
     HeaderComponent,
-    NewEntryComponent
+    NewEntryComponent,
+    UpdateEntryComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     //material design
     BrowserAnimationsModule, MatButtonModule, MatTableModule,
-    MatInputModule, MatCardModule, MatSelectModule, MatToolbarModule,
+    MatInputModule, MatCardModule, MatSelectModule, MatToolbarModule, MatDialogModule,
 
     ReactiveFormsModule,
     AppRouterModule
   ],
+  entryComponents:[UpdateEntryComponent],
   providers: [EntryService],
   bootstrap: [AppComponent]
 })

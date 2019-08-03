@@ -14,9 +14,12 @@ export class EntryService {
     return this.http.get(this.baseUrl);
   }
 
-
   createEntry(entry){
     return this.http.post(this.baseUrl, entry);
+  }
+
+  updateEntry(id, entry){
+    return this.http.put(this.baseUrl+'/'+id, entry);
   }
 
 }
