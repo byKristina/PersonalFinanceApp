@@ -14,12 +14,13 @@ import { HttpClientModule } from '@angular/common/http';
 
 //material design
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatInputModule, MatCardModule, MatSelectModule, MatTableModule, MatToolbarModule, MatDialogModule} from '@angular/material';
+import {MatButtonModule, MatInputModule, MatCardModule, MatSelectModule, MatTableModule, MatToolbarModule, MatDialogModule, MatListModule} from '@angular/material';
 import { NewEntryComponent } from './new-entry/new-entry.component';
 
 //forms
 import {ReactiveFormsModule} from '@angular/forms';
 import { UpdateEntryComponent } from './update-entry/update-entry.component';
+import { DeleteEntryComponent } from './delete-entry/delete-entry.component';
 
 @NgModule({
   declarations: [
@@ -28,14 +29,15 @@ import { UpdateEntryComponent } from './update-entry/update-entry.component';
     FooterComponent,
     HeaderComponent,
     NewEntryComponent,
-    UpdateEntryComponent
+    UpdateEntryComponent,
+    DeleteEntryComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     //material design
     BrowserAnimationsModule, MatButtonModule, MatTableModule,
-    MatInputModule, MatCardModule, MatSelectModule, MatToolbarModule, MatDialogModule,
+    MatInputModule, MatCardModule, MatSelectModule, MatToolbarModule, MatDialogModule, MatListModule,
 
     ReactiveFormsModule,
     AppRouterModule
